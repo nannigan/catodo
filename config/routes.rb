@@ -4,8 +4,8 @@ Catodo::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'pages#index'
-  resources 'animals'  do
-    resources 'tasks'    
+  resources :animals  do
+    resources :tasks    
   end
 
   # Example of regular route:
