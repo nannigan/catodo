@@ -1,0 +1,15 @@
+<!-- for each individual by id -->
+<div style='row'>
+<div style= 'col-s-12'>	<h2><%= @animal.species %></h2>
+<p>	Here are the nice things we must do for the <%= @animal.species %></p>
+	<% @animal.tasks.each do |task|%>
+		<blockquote><%= task.id %>: <%= task.todo %></blockquote>
+	<% end %>
+<p>Please add any more activities relating to the <%= @animal.species %> here:</p>
+<%= simple_form_for @task, :url => animal_tasks_path(@animal) do |f|%>
+<%= f.input :todo %>
+<%= f.hidden_field :animal_id %>
+<%= f.submit %>
+<% end %>
+</div>
+</div>

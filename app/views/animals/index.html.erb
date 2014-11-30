@@ -1,0 +1,13 @@
+<% @animals.each do |animal| %>
+
+
+<h3><%= link_to animal.species , animal_path(animal) %></h3>
+Here are the things we must do for the <%= animal.species %>:
+
+	<% animal.tasks.each do |task|%>
+	
+	<blockquote><%= task.id %>: <%= task.todo %></blockquote>
+	<% end %>
+<% end %>
+
+
