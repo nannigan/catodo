@@ -8,6 +8,7 @@ Catodo::Application.routes.draw do
   root 'animals#index'
   resources 'animals'  do
     resources 'tasks'    
+
   end
 
 
