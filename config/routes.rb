@@ -6,9 +6,14 @@ Catodo::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'animals#index'
+  # animals exist before they are assigned
   resources 'animals'  do
     resources 'tasks'    
+  end
+# animals exist before they are assigned
 
+  resources 'workers' do 
+    resources 'assignments'  
   end
 
 

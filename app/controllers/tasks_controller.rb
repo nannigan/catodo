@@ -2,9 +2,9 @@ class TasksController < ApplicationController
 	def new
 		@task = Task.new
 	end
+	
 	def create
 		@animal = Animal.find(params[:animal_id])
-<<<<<<< HEAD
 		@animal.tasks.create(task_params)
 		redirect_to animal_path(@animal)
 	end

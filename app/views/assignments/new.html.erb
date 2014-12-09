@@ -1,0 +1,8 @@
+<%= simple_form_for @assignment, :url => worker_assignments_path(@worker) do |f| %>
+
+<%= f.hidden_field :worker_id %>
+<%= f.input :animal_id, collection: @animals, as: :grouped_select, group_method: :species %>
+<%= f.input :start_date %>
+<%= f.submit %>
+
+<% end %>
