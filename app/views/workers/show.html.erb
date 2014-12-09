@@ -1,7 +1,7 @@
 
 
 <script>  
-$('#datepicker').datepicker({
+$('input.datepicker').datepicker({
   	 // defaultDate: +1,
   	 // dateFormat: 'mm/dd/yy'
 		// showAnim: 'slideDown'
@@ -22,7 +22,7 @@ $('#datepicker').datepicker({
 <%= f.input :animal_id, collection: @animals, include_blank: false  %>
 
    
-<%= f.input :start_date, id: "datepicker" %>
+<%= f.input :start_date, :class => "datepicker", as: :datepicker  %>
 
 <%= f.button :submit %>
 
